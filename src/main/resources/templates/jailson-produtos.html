@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js"></script>
+</head>
+<body>
+<h1>Alterar !</h1>
+
+<form action="/alterar" method="post" th:object="${produto}">
+    <input th:field="*{id}" hidden>
+    <input th:field="*{nome}" type="text" name="nome" placeholder="Nome">
+    <input th:field="*{descricao}" type="text" name="descricao" placeholder="Descricao">
+    <input th:field="*{preco}" type="text" name="preco" placeholder="Preco">
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+</form>
+</body>
+</html>
